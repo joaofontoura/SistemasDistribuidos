@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistemas distribuídos</title>
+</head>
+<body>
+    <h1>Usando método fetch para requisição assíncronas em JavaScript</h1>    
+</body>
+</html>
+
+<script>
+    async function request(){
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+        const object = await response.json();
+        document.querySelector("#dados").innerHTML = JSON.stringfy(object);
+    }
+
+    request();
+</script>
